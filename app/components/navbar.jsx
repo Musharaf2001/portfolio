@@ -10,7 +10,7 @@ function Navbar() {
           <Link
             href="/"
             className=" text-[#16f2b3] text-3xl font-bold">
-            Musharaf
+              <img src="https://musharaf.s3.ap-south-1.amazonaws.com/Mlogo.png" alt="musharaf" width="50" height="50"/>
           </Link>
         </div>
 

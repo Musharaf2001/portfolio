@@ -1,6 +1,7 @@
 "use client";
 // @flow strict
 import { isValidEmail } from '@/utils/check-email';
+import mailjet from 'node-mailjet';
 import axios from 'axios';
 import { useState } from 'react';
 import { TbMailForward } from "react-icons/tb";
@@ -51,6 +52,61 @@ function ContactWithoutCaptcha() {
       toast.error(error?.text || error);
     };
   };
+
+
+const handleSendMail1 = async (e) => {
+  e.preventDefault();
+  if (!userInput.email || !userInput.message || !userInput.name) {
+    setError({ ...error, required: true });
+    return;
+  } else if (error.email) {
+    return;
+  } else {
+    setError({ ...error, required: false });
+  }
+
+  // Mailjet API credentials
+  const mailjetClient = mailjet.connect(
+    process.env.NEXT_PUBLIC_MAILJET_API_KEY, 
+    process.env.NEXT_PUBLIC_MAILJET_SECRET_KEY
+  );
+
+  const request = mailjetClient.post("send", { version: 'v3.1' }).request({
+    Messages: [
+      {
+        From: {
+          Email: "musharafnabeel@gmail.com", // Replace with your verified sender email
+          Name: "Musharaf"
+        },
+        To: [
+          {
+            Email: userInput.email,
+            Name: userInput.name
+          }
+        ],
+        Subject: "New Message",
+        TextPart: userInput.message,
+        HTMLPart: `<h3>${userInput.message}</h3>`
+      }
+    ]
+  });
+
+  try {
+    const res = await request;
+    const teleRes = await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/contact`, userInput);
+
+    if (res.response.status === 200 || teleRes.status === 200) {
+      toast.success('Message sent successfully!');
+      setUserInput({
+        name: '',
+        email: '',
+        message: '',
+      });
+    }
+  } catch (error) {
+    toast.error(error?.message || error);
+  }
+};
 
   return (
     <div className="">
