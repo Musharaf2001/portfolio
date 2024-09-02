@@ -27,14 +27,17 @@ export default async function Home() {
 
   return (
     <>
+    <div className="grigg">
       <HeroSection />
       <AboutSection />
       <Experience />
+      
       <Skills />
       <Projects />
       <Education />
       <Blog blogs={blogs} />
       <ContactSection />
+    </div>
     </>
   )
 };

@@ -9,27 +9,27 @@ import lottieFile from '/public/lottie/study.json';
 
 function Education() {
   return (
-    <div id="education" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
-      <Image
+    <div id="education" className="relative z-50 border-t my-12 lg:my-24 border-[#c89147]">
+      {/* <Image
         src="/section.svg"
         alt="Hero"
         width={1572}
         height={795}
         className="absolute top-0 -z-10"
-      />
+      /> */}
       <div className="flex justify-center -translate-y-[1px]">
         <div className="w-3/4">
-          <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent  w-full" />
+          <div className="h-[1px] bg-gradient-to-r from-transparent via-[#c89147] to-transparent  w-full" />
         </div>
       </div>
 
       <div className="flex justify-center my-5 lg:py-8">
         <div className="flex  items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
+          <span className="w-24 h-[2px] bg-[#c89147]"></span>
+          <span className="bg-[#c89147] w-fit text-white p-2 px-5 text-xl rounded-md">
             Educations
           </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+          <span className="w-24 h-[2px] bg-[#c89147]"></span>
         </div>
       </div>
 
@@ -46,7 +46,7 @@ function Education() {
               {
                 educations.map(education => (
                   <GlowCard key={education.id} identifier={`education-${education.id}`}>
-                    <div className="p-3 relative text-white">
+                    <div className="p-3 relative text-[#c89147]">
                       <Image
                         src="/blur-23.svg"
                         alt="Hero"
@@ -55,12 +55,12 @@ function Education() {
                         className="absolute bottom-0 opacity-80"
                       />
                       <div className="flex justify-center">
-                        <p className="text-xs sm:text-sm text-[#16f2b3]">
+                        <p className="text-xs sm:text-sm text-[#c89147]">
                           {education.duration}
                         </p>
                       </div>
                       <div className="flex items-center gap-x-8 px-3 py-5">
-                        <div className="text-violet-500  transition-all duration-300 hover:scale-125">
+                        <div className="text-[#c89147]  transition-all duration-300 hover:scale-125">
                           <BsPersonWorkspace size={36} />
                         </div>
                         <div>
