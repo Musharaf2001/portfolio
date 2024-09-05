@@ -21,6 +21,7 @@ module.exports = {
           xl: "4rem",
           "2xl": "4rem",
           "3xl": "5rem",
+          "4xl": "6rem",
         },
       },
 
@@ -28,8 +29,23 @@ module.exports = {
         screens: {
           "4k": "1980px",
         },
+        textStroke: {
+          '1': '1px',
+          '2': '2px',
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.text-stroke-1': {
+          '-webkit-text-stroke': '1px #f8ad22',
+        },
+        '.text-stroke-2': {
+          '-webkit-text-stroke': '1px #158d8d',
+        },
+      });
+    },
+  ],
 }
