@@ -1,3 +1,5 @@
+import { BsWhatsapp } from "react-icons/bs";
+
 export const personalData = {
   name: "MUSHARAF",
   profile: '/musharaf2.png',
@@ -11,6 +13,7 @@ export const personalData = {
   facebook: 'https://www.facebook.com/musharaf.nabeel.5/',
   linkedIn: 'https://www.linkedin.com/in/musharafnabeel/',
   twitter: 'https://x.com/Musharaf_nabeel',
+  whatsapp: 'https://wa.me/919677859682',
   stackOverflow: 'https://stackoverflow.com/users/27058138/musharaf-nabeel',
   leetcode: "https://leetcode.com/u/musharafnabeel/",
   devUsername: "musharafnabeel",
