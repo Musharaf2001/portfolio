@@ -2,7 +2,7 @@ import { BsWhatsapp } from "react-icons/bs";
 
 export const personalData = {
   name: "MUSHARAF",
-  profile: '/musharaf2.png',
+  profile: '/musharaf6.jpg',
   profile1: '/musharaf2.png',
   designation: "Software Developer",
   description: "My name is Musharaf, and I am a dedicated and enthusiastic programmer with a passion for learning and exploring new technologies. I thrive on problem-solving and have a strong self-learning attitude that drives me to continuously enhance my skills. I have a deep love for web application development across various stacks and am committed to making the web more accessible and open to everyone.My core expertise lies in JavaScript, and I leverage it extensively across my projects. I am always eager to tackle new challenges and am open to job opportunities that align with my skills and interests.",
