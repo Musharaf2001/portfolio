@@ -15,11 +15,14 @@ function AboutSection() {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8">
         <div className="order-2 lg:order-1">
-          <p className="font-large mb-5 text-[#f8ad22] text-4xl uppercase font-bold text-stroke-1">
+          <p className="font-large mb-5 text-white text-4xl uppercase font-bold text-stroke-1">
             Who I am?
           </p>
           <p className="text-[#fff]  text-sm lg:text-lg text-stroke-1">
-            {personalData.description}
+            {personalData.description1}
+            <br></br>
+            <br></br>
+            {personalData.description2}
           </p>
         </div>
         <div className="relative flex justify-center order-1 lg:order-2">
